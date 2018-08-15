@@ -1,0 +1,13 @@
+# IDE
+.idea
+.vs
+.vscode
+
+# Terraform
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+terraform.plan
+
+# Private data
+keys/
