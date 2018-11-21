@@ -1,5 +1,5 @@
 resource "aws_iam_user" "cloudwatch_read_user" {
-    name                            = "${var.project_name}-${var.environment}-perf-test"
+    name                            = "${var.project_name}-${var.environment}-cloudwatch-read"
 }
 
 resource "aws_iam_access_key" "cloudwatch_read_user_key" {
@@ -16,7 +16,7 @@ resource "aws_iam_user_login_profile" "cloudwatch_read_user_profile" {
 }
 
 resource "aws_iam_user_policy" "cloudwatch_read_user_policy" {
-    name                            = "${var.project_name}-${var.environment}-perf-test-policy"
+    name                            = "${var.project_name}-${var.environment}-cloudwatch-read-policy"
     user                            = "${aws_iam_user.cloudwatch_read_user.name}"
     policy                          = <<EOF
 {
