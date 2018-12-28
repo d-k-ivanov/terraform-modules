@@ -14,7 +14,7 @@ variable "environment" {
 
 variable "sub_environment" {
     type        = "string"
-    description = "Sub environment name - ods, pas, etc."
+    description = "Sub environment name."
 }
 
 variable "ecs_service_arn" {

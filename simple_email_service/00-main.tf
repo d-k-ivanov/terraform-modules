@@ -55,7 +55,7 @@ resource "aws_route53_record" "ses_domain_dmarc" {
   name              = "_dmarc.${var.dns_zone_name}"
   type              = "TXT"
   ttl               = "600"
-  records           = ["v=DMARC1; p=none; rua=mailto:dmitriy.ivanov@ormco.com; ruf=mailto:dmitriy.ivanov@ormco.com; fo=1"]
+  records           = ["v=DMARC1; p=none; rua=mailto:admin@company.com; ruf=mailto:admin@company.com; fo=1"]
 }
 
 # !!! Those settings need to create username with "Generate"-bases SMTP acces
