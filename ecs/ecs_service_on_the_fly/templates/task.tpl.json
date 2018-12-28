@@ -1,0 +1,18 @@
+[
+    {
+        "name": "${task_name}",
+        "image": "${task_image}",
+        "cpu": 128,
+        "memory": 256,
+        "essential": true,
+        "privileged": true,
+        "logConfiguration": {
+            "logDriver": "awslogs",
+            "options": {
+                "awslogs-group": "${log_group_name}",
+                "awslogs-region": "${log_group_region}",
+                "awslogs-stream-prefix": "${log_group_prefix}"
+            }
+        }
+    }
+]
