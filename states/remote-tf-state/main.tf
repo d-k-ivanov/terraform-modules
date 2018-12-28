@@ -1,4 +1,4 @@
-esource "aws_s3_bucket" "remote_tf_state_bucket" {
+Resource "aws_s3_bucket" "remote_tf_state_bucket" {
     bucket          = "${var.bucket_name}"
     acl             = "private"
     region          = "${var.region}"

@@ -1,0 +1,34 @@
+[
+    {
+        "name": "${task_name}",
+        "image": "${task_image}",
+        "cpu": ${task_cpu},
+        "memory": ${task_mem},
+        "essential": true,
+        "privileged": true,
+        "portMappings": [
+            {
+                "containerPort": ${task_port},
+                "hostPort": ${task_port}
+            }
+        ],
+        "environment" : [
+            { "name" : "JAVA_OPTS", "value" : "${java_opts}" }
+        ],
+        "mountPoints": [
+            {
+                "ContainerPath" : "/tmp",
+                "SourceVolume" : "shared-tmp-volume",
+                "ReadOnly" : false
+            }
+        ],
+        "logConfiguration": {
+            "logDriver": "awslogs",
+            "options": {
+                "awslogs-group": "${log_group_name}",
+                "awslogs-region": "${log_group_region}",
+                "awslogs-stream-prefix": "${log_group_prefix}"
+            }
+        }
+    }
+]
